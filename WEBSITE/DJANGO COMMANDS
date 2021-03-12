@@ -1,0 +1,17 @@
+#CREATE PROJECT
+django-admin startproject <name of project>
+
+#START WEB ADDRESS
+python manage.py runserver
+
+#ADMIN USER
+python manage.py createsuperuser
+    user: protein
+    pass: diseases
+
+#SYNC EVERYTHING
+python manage.py migrate
+
+#VIEWS (homepages)
+
+
