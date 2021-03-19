@@ -6,6 +6,5 @@ from django.shortcuts import render
 
 # Create your views here.
 def home_view(*args, **kwargs):
-    print()
-    return render("index.html", {})
-
+    print(args, kwargs)
+    return render('index.html', {})
