@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{%block content%}
+  <h2>List of COVID Proteins</h2>
+
+<div class="proteins">
+    {% for protein in proteins %}
+        <div class = "protein">
+            <h><a href="#">{{protein.protein_name}}</a></h>
+            <p>{{protein.protein_id}}</p>
+            <p>{{protein.function_preview}}</p>
+            </div>
+    {% endfor %}
+    </div>
+{% endblock %}
