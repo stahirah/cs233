@@ -14,4 +14,4 @@ class Protein(models.Model):
         return self.protein_id
 
     def function_preview(self):
-        return self.function[:50] + '...'
+        return self.function[:200] + '...'
