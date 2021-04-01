@@ -1,0 +1,426 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  padding: 20px;
+  margin-top: 20px;
+  font-family: sans-serif;
+  background-color: rgb(227,234,244);
+}
+h1{
+  font-size: 3.2vw;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 50px;
+  color: rgb(146,167,205);
+}
+.listheading{
+  font-size: 3.2vw;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: rgb(146,167,205);
+}
+h2{
+  font-size: 1.7vw;
+  font-weight: bolder;
+  color: rgb(146,167,205);
+  margin: 0px;
+}
+h2 a{
+  font-size: 1.7vw;
+  font-weight: bolder;
+  color: rgb(146,167,205);
+  margin: 0px;
+}
+h3 {
+  font-size: 1.3vw;
+  font-weight: bolder;
+  color: rgb(146,167,205);
+  margin-left: 50px;
+}
+.result p {
+  border-style: none;
+  font-size: 1.3vw;
+  font-weight: lighter;
+  color: rgb(146,167,205);
+  margin-left: 50px;
+}
+.protein-name{
+  font-size: 40px;
+  font-weight: bolder;
+  color: rgb(146,167,205);
+  margin: 0px;
+}
+.protein-name:hover{
+  color: orange;
+}
+.description-box{
+  margin: 10px;
+  margin-left: 250px;
+  margin-right: 250px;
+  padding: 10px;
+  border-style: solid;
+  background-color: white;
+  border-color: rgb(227,234,244);
+}
+.description-box h3{
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: rgb(146,167,205);
+  margin: 0px;
+}
+.description-box p{
+  font-size: 1rem;
+  font-weight: lighter;
+  color: rgb(146,167,205);
+  border-left-style: none;
+  padding: 5px;
+  margin-left: 50px;
+  margin-top: 10px;
+  line-height: 30px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a .botton2{
+  width: 100%;
+  display: block;
+  font-size: 1vw;
+  text-align: center;
+  margin: 20px;
+  color: rgb(146,167,205);
+  border-style: solid;
+  text-decoration: none;
+}
+p{
+  font-size: 1.5vw;
+  font-weight: lighter;
+  color: rgb(146,167,205);
+  border-left-style: solid;
+  padding: 20px;
+  margin-left: 50px;
+  margin-top: 15px;
+  line-height: 40px;
+}
+img {
+  width: 100%;
+  height: auto;
+  padding-top: 75px;
+}
+.sticky{
+  width: 50%;
+  height: auto;
+  padding-top: 75px;
+  position: -webkit-sticky;
+  position: sticky;
+  float: left;
+  padding: 20px;
+  top: 0;
+}
+
+/*SEARCH BAR (CONTAINER ON BUTTON)*/
+.search-container {
+  color: rgb(146,167,205);
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+input#search-bar {
+  color: rgb(146,167,205);
+  margin: 0 auto;
+  width: 90%;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid rgb(146,167,205);
+  outline: none;
+}
+input#search-bar:focus {
+  border: 1px solid rgb(146,167,205);
+  transition: 0.35s ease;
+  color: rgb(146,167,205);
+}
+input#search-bar::placeholder {
+  color: rgb(146,167,205);
+}
+input#search-bar:focus::-webkit-input-placeholder {
+  color: rgb(146,167,205);
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus::-moz-placeholder {
+  color: rgb(146,167,205);
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus:-ms-placeholder {
+  color: rgb(146,167,205);
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+/*GO*/
+.button{
+  background-color: rgb(146,167,205);
+  color: white;
+  height: 50px;
+  width: 9%;
+  border: 2px solid rgb(146,167,205);
+  font-weight: bold;
+}
+.button:hover{
+  cursor: pointer;
+}
+/*SEE LIST OF ALL PROTEINS*/
+.center {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.button2{
+  margin-bottom: 20px;
+  background-color: rgb(146,167,205);
+  color: rgb(227,234,244);
+  height: 45px;
+  width: 30%;
+  border: 2px solid rgb(146,167,205);
+  font-weight: bold;
+}
+/*STRUCTURE*/
+.column{
+  float: left;
+  width: 40%;
+  padding: 20px;
+}
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+/*FOOTNOTES*/
+.credits {
+  font-size: .9vw;
+  font-weight: lighter;
+  left: 0;
+  bottom: 0;
+  padding: 30px;
+  width: 100%;
+  background-color: rgb(146,167,205);
+  color: black;
+  text-align: center;
+  color: rgb(227,234,244);
+  position: fixed;
+}
+
+/*RESPONSIVE SCREEN*/
+/*full length*/
+@media screen and (min-width: 1100px) {
+  .column{
+    width: 50%;
+  }
+}
+
+
+/*Medisum devices*/
+@media screen and (max-width: 1100px) {
+  .column{
+    width: 100%;
+  }
+  h1{
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+  }
+  h2{
+    font-size: 25px;
+    padding: 10px;
+  }
+  a{
+    font-size: 13px;
+  }
+  p{
+    font-size: 15px;
+    font-weight: lighter;
+  }
+  .description-box{
+    margin: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px;
+    border-style: solid;
+    background-color: white;
+    border-color: rgb(227,234,244);
+  }
+  .description-box h3{
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: rgb(146,167,205);
+    margin: 0px;
+  }
+  .description-box p{
+    font-size: 1rem;
+    font-weight: lighter;
+    color: rgb(146,167,205);
+    border-left-style: none;
+    padding: 5px;
+    margin-left: 50px;
+    margin-top: 10px;
+    line-height: 30px;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(146,167,205);
+    margin-left: 10px;
+  }
+  .result p {
+    border-style: none;
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(146,167,205);
+    margin-left: 30px;
+    line-height: 30px;
+  }
+  img {
+    display: none;
+/*    width: 100%;
+    height: auto;
+    padding-top: 130px;
+    margin:;
+*/
+  }
+  .center {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .botton2{
+    width: 100%;
+  }
+  .credits{
+    font-size: 15px;
+  }
+}
+
+
+
+
+/*small devices*/
+@media screen and (max-width: 540px) {
+  .column{
+    width: 100%;
+  }
+  body{
+    padding: 10px;
+  }
+  h1{
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  h2{
+    font-size: 20px;
+    padding: 5px;
+  }
+  a{
+    font-size: 20px;
+  }
+  p{
+    font-size: 4vw;
+    font-weight: lighter;
+    line-height: 30px;
+  }
+  .description-box{
+    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-style: solid;
+    background-color: white;
+    border-color: rgb(227,234,244);
+  }
+  .description-box h3{
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: rgb(146,167,205);
+    margin: 0px;
+  }
+  .description-box p{
+    font-size: 1rem;
+    font-weight: lighter;
+    color: rgb(146,167,205);
+    border-left-style: none;
+    padding: 5px;
+    margin-left: 50px;
+    margin-top: 10px;
+    line-height: 30px;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(146,167,205);
+    margin-left: 10px;
+  }
+  .result p {
+    border-style: none;
+    font-size: 4vw;
+    font-weight: lighter;
+    color: rgb(146,167,205);
+    margin-left: 30px;
+    line-height: 30px;
+  }
+  /*HIDDEN IMAGE FOR SMALLER SCREENS*/
+  img {
+    display: none;
+  }
+  .search-container {
+    color: rgb(146,167,205);
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  input#search-bar {
+    color: rgb(146,167,205);
+    margin: 0 auto;
+    width: 80%;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid rgb(146,167,205);
+    outline: none;
+  }
+  /*GO*/
+  .button{
+    background-color:rgb(146,167,205);
+    color: white;
+    height: 50px;
+    width: 15%;
+    border: 2px solid rgb(146,167,205);
+    font-weight: bold;
+  }
+  /*SEE LIST OF ALL PROTEINS*/
+  .center {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  a{
+    font-size: 10px;
+  }
+  .credits{
+    font-size: 10px;
+    padding: 10px;
+  }
+}

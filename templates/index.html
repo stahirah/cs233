@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOMEPAGE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- partial:index.partial.html -->
+<body>
+  <h1>CSCI 233 CAPSTONE</h1>
+  <div class="row">
+    <div class="column">
+      <form class="search-container">
+        <input type="text" id="search-bar" placeholder="Search COVID Protein">
+        <button class="button" id="searchBtn" onclick="javascript:alert('Working!')">Go</button>
+      </form>
+      <div class="center">
+        <button class="button2" id="listBtn"> <a href="list.html">See List of all Proteins</a></button>
+      </div>
+      <h2>ABOUT</h2>
+      <p>Orci ac auctor augue mauris augue neque. Faucibus nisl tincidunt eget nullam non nisi. Dignissim sodales ut eu sem integer. Dictum at tempor commodo ullamcorper. Nunc id cursus metus aliquam. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Sed risus ultricies tristique nulla aliquet enim. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean. Nec feugiat in fermentum posuere urna nec tincidunt praesent.</p>
+
+    </div>
+    <div class="column">
+        <img src="image_base.png" alt="x">
+    </div>
+  </div>
+
+  <div class="credits">
+    Benjamin, Dominik, Paul, Sahra, Tabata <br> CSCI 233 Computer Science Minor Capstone <br> Fall 2021
+  </div>
+
+  <script type="text/javascript">
+    var input = document.getElementById("search-bar");
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+       event.preventDefault();
+       document.getElementById("searchBtn").click();
+      }
+    });
+  </script>
+</body>
+</html>
