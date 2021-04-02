@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>RESULT</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="row">
+{% extends 'index.html' %}
+{%block content%}
+
+    <div class="protein_detail">
+      <div class="protein">
+        <h1>{{protein.Protein_id}}</h1>
+        <h3>Name</h3>
+        <p>{{protein.Protein_name}}</p>
+        <h3>Function</h3>
+        <p>{{protein.Function}}</p>
+        <h3>Targets</h3>
+        <p>{{protein.Locations}}</p>
+      </div>
+
+
       <div class="column">
         <h1>PROTEIN A</h1>
         <form class="search-container">
@@ -43,5 +48,5 @@
     <div class="credits">
       <a href="index.html">BACK TO HOMEPAGE</a>
     </div>
-  </body>
-</html>
+
+{% endblock %}

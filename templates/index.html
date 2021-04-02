@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" >
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOMEPAGE</title>
+  <title>CSCI 233 CAPSTONE</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <!-- partial:index.partial.html -->
 <body>
-  <h1>CSCI 233 CAPSTONE</h1>
+  <h1>Shingeki No Covid</h1>
   <div class="row">
     <div class="column">
       <form class="search-container">
@@ -17,8 +18,16 @@
       <div class="center">
         <button class="button2" id="listBtn"> <a href="list.html">See List of all Proteins</a></button>
       </div>
+    <div class="wrapper">
+      <h1><a href="{% url 'proteins:list' %}"><img src="{% static 'logo.png' %}"/></a></h1>
+
+      {%block content%}
+
+      {% endblock %}
+
+      </div>
       <h2>ABOUT</h2>
-      <p>Orci ac auctor augue mauris augue neque. Faucibus nisl tincidunt eget nullam non nisi. Dignissim sodales ut eu sem integer. Dictum at tempor commodo ullamcorper. Nunc id cursus metus aliquam. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Sed risus ultricies tristique nulla aliquet enim. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean. Nec feugiat in fermentum posuere urna nec tincidunt praesent.</p>
+      <p>Viral Pathogenesis involves a series of specific events to gain access into the target host cell, hijack cellular machineries for viral reproduction, assembly of newly replicated viral parts, and finally viral exit. This project utilizes all experimental data about covid viruses. </p>
 
     </div>
     <div class="column">
