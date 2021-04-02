@@ -10,14 +10,15 @@
 <!-- partial:index.partial.html -->
 <body>
   <a href="{% url 'homepage' %}"><h1>COVID PROTEIN DIRECTORY</h1></a>
-
+  <div class="search-container">
     <form class="search-container">
         <input type="text" id="search-bar" placeholder="Search COVID Protein">
         <button class="button" id="searchBtn" onclick="javascript:alert('Working!')">Go</button>
       </form>
 
     <div class="center">
-        <button class="button2" id="listBtn"> <a href="{% url 'proteins:list' %}">See List of all Proteins</a></button>
+        <button class="button2" id="listBtn"> <a href="{% url 'proteins:list' %}">SEE LIST OF ALL PROTEINS</a></button>
+  </div>
   </div>
 
     <div class="row">
