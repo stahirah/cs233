@@ -3,37 +3,34 @@
 <html lang="en" >
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <title>CSCI 233 CAPSTONE</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <!-- partial:index.partial.html -->
 <body>
-  <h1>Shingeki No Covid</h1>
-  <div class="row">
-    <div class="column">
-      <form class="search-container">
+  <a href="{% url 'homepage' %}"><h1>COVID PROTEIN DIRECTORY</h1></a>
+
+    <form class="search-container">
         <input type="text" id="search-bar" placeholder="Search COVID Protein">
         <button class="button" id="searchBtn" onclick="javascript:alert('Working!')">Go</button>
       </form>
-      <div class="center">
-        <button class="button2" id="listBtn"> <a href="list.html">See List of all Proteins</a></button>
-      </div>
-    <div class="wrapper">
-      <h1><a href="{% url 'proteins:list' %}"><img src="{% static 'logo.png' %}"/></a></h1>
 
-      {%block content%}
-
-      {% endblock %}
-
-      </div>
-      <h2>ABOUT</h2>
-      <p>Viral Pathogenesis involves a series of specific events to gain access into the target host cell, hijack cellular machineries for viral reproduction, assembly of newly replicated viral parts, and finally viral exit. This project utilizes all experimental data about covid viruses. </p>
-
-    </div>
-    <div class="column">
-        <img src="image_base.png" alt="x">
-    </div>
+    <div class="center">
+        <button class="button2" id="listBtn"> <a href="{% url 'proteins:list' %}">See List of all Proteins</a></button>
   </div>
+
+    <div class="row">
+        {%block content%}
+        <div class="center">
+                <img src="/static/image_base.png" alt="x">
+          </div>
+              {% endblock %}
+      <div class="center">
+            <h2>ABOUT</h2>
+            <p>Viral Pathogenesis involves a series of specific events to gain access into the target host cell, hijack cellular machineries for viral reproduction, assemble of replicated viral parts, and finally the exit of new viral copies. This project utilizes all experimental data about Sars-Cov2 virus to present the pathogenesis of covid. </p>
+        </div>
+      </div>
 
   <div class="credits">
     Benjamin, Dominik, Paul, Sahra, Tabata <br> CSCI 233 Computer Science Minor Capstone <br> Fall 2021

@@ -1,14 +1,20 @@
 {% extends 'index.html' %}
 
 {%block content%}
-  <h2>List of COVID Proteins</h2>
+    <h1 class="listheading">LIST OF COVID PROTEINS</h1>
 
-<div class="proteins">
+<div>
     {% for protein in proteins %}
-        <div class = "protein">
-            <h><a href="{% url 'proteins:detail' protein.slug %}">{{protein.protein_id}}</a></h>
-            <p>{{protein.protein_name}}</p>
+    <a class="protein-name" href="{% url 'proteins:detail' protein.slug %}">{{protein.protein_id}}</a>
+        <div class = "description-box">
+            <p>Full protein name: {{protein.protein_name}}</p>
             <p>{{protein.function_preview}}</p>
-            </div>{}{% endfor %}
+            </div>
+    {% endfor %}
     </div>
+
+<div class="credits">
+      <a href="{% url 'homepage' %}">BACK TO HOMEPAGE</a>
+    </div>
+
 {% endblock %}
