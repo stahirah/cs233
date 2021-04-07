@@ -9,29 +9,39 @@
 </head>
 <!-- partial:index.partial.html -->
 <body>
-  <a href="{% url 'homepage' %}"><h1>COVID PROTEIN DIRECTORY</h1></a>
-  <div class="search-container">
+
+
+ <div class="search-container">
+    <div class="center">
+
+
+<button class="button2"> <a href="{% url 'homepage' %}">HOME</a></button>
+
+            <button class="button2"> <a href="{% url 'proteins:list' %}">TARGET COMPONENTS</a></button>
+            <button class="button2"> <a href="{% url 'proteins:list' %}">COVID PROTEINS</a></button>
+
     <form class="search-container">
         <input type="text" id="search-bar" placeholder="Search COVID Protein">
-        <button class="button" id="searchBtn" onclick="javascript:alert('Working!')">Go</button>
+
+        <button class="button" id="searchBtn" onclick="javascript:alert('Working!')">GO</button>
       </form>
+        </div>
+    </div>
 
-    <div class="center">
-        <button class="button2" id="listBtn"> <a href="{% url 'proteins:list' %}">SEE LIST OF ALL PROTEINS</a></button>
-  </div>
-  </div>
 
-    <div class="row">
         {%block content%}
+  <div class="row">
+        <a href="{% url 'homepage' %}"><h1>COVID PROTEIN DIRECTORY</h1></a>
         <div class="center">
-                <img src="/static/image_base.png" alt="x">
+                <img src="/static/image_base.png">
           </div>
-              {% endblock %}
-      <div class="center">
+      </div>
+
+  {% endblock %}
+<div class="center">
             <h2>ABOUT</h2>
             <p>Viral Pathogenesis involves a series of specific events to gain access into the target host cell, hijack cellular machineries for viral reproduction, assemble of replicated viral parts, and finally the exit of new viral copies. This project utilizes all experimental data about Sars-Cov2 virus to present the pathogenesis of covid. </p>
         </div>
-      </div>
 
   <div class="credits">
     Benjamin, Dominik, Paul, Sahra, Tabata <br> CSCI 233 Computer Science Minor Capstone <br> Fall 2021

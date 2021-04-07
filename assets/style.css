@@ -5,7 +5,7 @@ body {
   padding: 20px;
   margin-top: 20px;
   font-family: sans-serif;
-  background-color: rgb(227,234,244);
+  background-color: rgb(224,230,244);
 }
 h1{
   font-size: 3.2vw;
@@ -108,7 +108,7 @@ p{
 img {
   width: 100%;
   height: auto;
-  padding-top: 75px;
+  padding-top: 10px;
 }
 .sticky{
   width: 50%;
@@ -186,9 +186,9 @@ input#search-bar:focus:-ms-placeholder {
   margin-bottom: 20px;
   background-color: rgb(146,167,205);
   color: rgb(227,234,244);
-  height: 45px;
+  height: 60px;
   width: 30%;
-  border: 2px solid rgb(146,167,205);
+  border: 4px solid rgb(227,234,244);
   font-weight: bold;
 }
 /*STRUCTURE*/
@@ -214,7 +214,6 @@ input#search-bar:focus:-ms-placeholder {
   color: black;
   text-align: center;
   color: rgb(227,234,244);
-  position: fixed;
 }
 
 /*RESPONSIVE SCREEN*/

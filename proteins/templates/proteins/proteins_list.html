@@ -7,8 +7,8 @@
     {% for protein in proteins %}
     <a class="protein-name" href="{% url 'proteins:detail' protein.slug %}">{{protein.protein_id}}</a>
         <div class = "description-box">
-            <p>Full protein name: {{protein.protein_name}}</p>
-            <p>{{protein.function_preview}}</p>
+            <p>Full protein name: {{protein.name_preview}}</p>
+            <p>Function: {{protein.function_preview}}</p>
             </div>
     {% endfor %}
     </div>

@@ -7,19 +7,21 @@
         <h3>FULL PROTEIN NAME</h3>
             <p>{{protein.protein_name}}</p>
         <h3>FUNCTION</h3>
-            <p>{{protein.function}}</p>
+            <p>{{protein.function|linebreaksbr}}</p>
         <h3>TARGETS</h3>
-        <p>{{protein.locations}}</p>
+        <p>{{protein.locations|linebreaksbr}}</p>
       </div>
+        <div class="center">
+    <button class="button2" id="listBtn"> <a href="{% url 'homepage' %}">BACK TO HOMEPAGE</a></button>
+    </div>
     </div>
 
         <div class="sticky">
-                  <img src="/static/default.png" alt="x">
+            <h1>LOCATIONS</h1>
+                  <img src="{{protein.thumb.url}}">
               </div>
 
-<div class="center">
-    <button class="button2" id="listBtn"> <a href="{% url 'homepage' %}">BACK TO HOMEPAGE</a></button>
-    </div>
+
 
 
 {% endblock %}
