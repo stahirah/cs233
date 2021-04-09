@@ -3,7 +3,7 @@
 }
 body {
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
   font-family: sans-serif;
   background-color: rgb(224,230,244);
 }
@@ -47,7 +47,7 @@ h3 {
   margin-left: 50px;
 }
 .protein-name{
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bolder;
   color: rgb(146,167,205);
   margin: 0px;
@@ -56,13 +56,10 @@ h3 {
   color: orange;
 }
 .description-box{
-  margin: 10px;
-  margin-left: 250px;
-  margin-right: 250px;
   padding: 10px;
   border-style: solid;
   background-color: white;
-  border-color: rgb(227,234,244);
+  border:2px solid rgb(146,167,205);
 }
 .description-box h3{
   font-size: 1.5rem;
@@ -76,9 +73,9 @@ h3 {
   color: rgb(146,167,205);
   border-left-style: none;
   padding: 5px;
-  margin-left: 50px;
+  margin-left: 10px;
   margin-top: 10px;
-  line-height: 30px;
+  line-height: 25px;
 }
 a {
   text-decoration: none;
@@ -423,3 +420,23 @@ input#search-bar:focus:-ms-placeholder {
     padding: 10px;
   }
 }
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+
+}
+
+.thumb {
+    padding: 10px;
+    border:2px solid rgb(146,167,205);
+    position: relative;
+    padding-bottom: 40px;
+
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;

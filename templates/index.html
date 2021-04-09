@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en" >
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +18,12 @@
 
 <button class="button2"> <a href="{% url 'homepage' %}">HOME</a></button>
 
-            <button class="button2"> <a href="{% url 'proteins:list' %}">TARGET COMPONENTS</a></button>
+            <button class="button2"> <a href="{% url 'locations:list' %}">TARGET COMPONENTS</a></button>
             <button class="button2"> <a href="{% url 'proteins:list' %}">COVID PROTEINS</a></button>
 
-    <form class="search-container">
-        <input type="text" id="search-bar" placeholder="Search COVID Protein">
-
-        <button class="button" id="searchBtn" onclick="javascript:alert('Working!')">GO</button>
+    <form class="search-container" action="{% url 'proteins:search_results' %}" method="get">{% csrf_token %}
+        <input name="q" type="text" id="search-bar" placeholder="Search COVID Protein">
+        <button class="button" id="searchBtn">GO</button>
       </form>
         </div>
     </div>

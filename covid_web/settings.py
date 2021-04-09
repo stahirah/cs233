@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     #custom apps
     'proteins',
+    'locations',
 ]
 
 MIDDLEWARE = [

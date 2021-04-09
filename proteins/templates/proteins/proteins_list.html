@@ -3,10 +3,11 @@
 {%block content%}
     <h1 class="listheading">LIST OF COVID PROTEINS</h1>
 
-<div>
+<div class="thumbnails">
     {% for protein in proteins %}
+    <div class = "description-box">
     <a class="protein-name" href="{% url 'proteins:detail' protein.slug %}">{{protein.protein_id}}</a>
-        <div class = "description-box">
+
             <p>Full protein name: {{protein.name_preview}}</p>
             <p>Function: {{protein.function_preview}}</p>
             </div>
