@@ -6,14 +6,18 @@
 
       <div>
         <h1>{{protein.protein_id}}</h1>
-          <div class="result">
-        <h3>FULL PROTEIN NAME</h3>
+          <div class = "description-box">
+        <h2>FULL PROTEIN NAME</h2>
             <p>{{protein.protein_name}}</p>
-        <h3>FUNCTION</h3>
+              </div>
+        <div class = "description-box">
+        <h2>FUNCTION</h2>
             <p>{{protein.function|linebreaksbr}}</p>
-        <h3>TARGETS</h3>
-        <p>{{protein.locations|linebreaksbr}}</p>
             </div>
+          <div class = "description-box">
+        <h2>TARGETS</h2>
+        <p>{{protein.locations|linebreaksbr}}</p>
+              </div>
 
           </div>
 
