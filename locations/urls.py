@@ -5,5 +5,6 @@ app_name = 'locations'
 
 urlpatterns = [
     path('', views.locations_list, name='list'),
-    path('<slug>', views.location_detail, name='detail')
+    path('<slug>', views.location_detail, name='detail'),
+    path('', views.map, name='map'),
 ]

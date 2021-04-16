@@ -1,18 +1,18 @@
 {% extends 'index.html' %}
 
 {%block content%}
+    <div class="thumb">
     <h1 class="listheading">SEARCH RESULTS</h1>
 
-<ul>
     {% for protein in object_list %}
         <div class = "description-box">
     <a class="protein-name" href="{% url 'proteins:detail' protein.slug %}">{{protein.protein_id}}</a>
-
             <p>Full protein name: {{protein.name_preview}}</p>
             <p>Function: {{protein.function_preview}}</p>
             </div>
     {% endfor %}
-    </ul>
+        </div>
+
 
 <div class="center">
     <button class="button2" id="listBtn"> <a href="{% url 'homepage' %}">BACK TO HOMEPAGE</a></button>

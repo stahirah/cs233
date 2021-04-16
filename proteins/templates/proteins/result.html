@@ -2,33 +2,35 @@
 {%block content%}
 
 
-<div class="details">
+<div class="slide">
 
-      <div>
+
         <h1>{{protein.protein_id}}</h1>
-          <div class = "description-box">
+    <div class = "description-box">
         <h2>FULL PROTEIN NAME</h2>
             <p>{{protein.protein_name}}</p>
-              </div>
-        <div class = "description-box">
+        </div>
+    <div class = "description-box">
         <h2>FUNCTION</h2>
             <p>{{protein.function|linebreaksbr}}</p>
-            </div>
-          <div class = "description-box">
+        </div>
+    <div class = "description-box">
         <h2>TARGETS</h2>
         <p>{{protein.locations|linebreaksbr}}</p>
               </div>
 
-          </div>
 
 
-    <div>
-             <h1>LOCATIONS</h1>
+    <h1>LOCATIONS</h1>
+
+
                          {% for p in photos %}
-                               <h3>{{p.images.name|slice:":-12"}}</h3><img src="{{p.images.url}}">
+                                <div class = "description-box">
+                               <h2>{{p.images.name|slice:":-12"}}</h2><img src="{{p.images.url}}">
+                                    </div>
                         {% endfor %}
-            </div>
 
+</div>
 </div>
 <div class="center"><button class="button2" id="listBtn"> <a href="{% url 'homepage' %}">BACK TO HOMEPAGE</a></button></div>
 

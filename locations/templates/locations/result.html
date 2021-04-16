@@ -1,15 +1,17 @@
 {% extends 'index.html' %}
 {%block content%}
 
-    <div>
+    <div class = "slide">
         <h1>{{location.location_name}}</h1>
-        <div class="center">
+        <div>
             <img src="{{location.thumb.url}}">
         </div>
 
         <div class="result">
-        <h3>DESCRIPTION</h3>
-            <p>{{location.description|linebreaksbr}}</p>
+            <div class = "description-box">
+            <h2>DESCRIPTION</h2>
+                <p>{{location.description|linebreaksbr}}</p>
+            </div>
         </div>
       </div>
 

@@ -12,3 +12,7 @@ def location_detail(request, slug):
     # return HttpResponse(slug)
     location = Location.objects.get(slug=slug)
     return render(request, 'locations/result.html', {'location':location})
+
+def map(request):
+    locations = Location.objects.all().order_by('location_name')
+    return render(request, 'locations/map.html', {'map':locations})

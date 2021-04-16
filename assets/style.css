@@ -1,17 +1,24 @@
 *{
   box-sizing: border-box;
 }
-body {
-  padding: 20px;
-  margin-top: 0px;
-  font-family: sans-serif;
-  background-color: rgb(224,230,244);
+
+body, html {
+height:100%;
+background-position: top;
+background-repeat: repeat;
+  background-size: cover;
+background-image: url("/static/bg2.png");
+background-blend-mode: lighten;
+font-family: sans-serif;
+background-color: rgb(146,167,205);
 }
+
+
 h1{
   font-size: 3.2vw;
   text-align: center;
-  padding: 20px;
-  margin-bottom: 50px;
+  padding: 10px;
+  margin: auto;
   color: rgb(146,167,205);
 }
 .listheading{
@@ -60,8 +67,12 @@ h3 {
   border-style: solid;
   background-color: white;
   border:2px solid rgb(146,167,205);
+  width:90%;
+  margin:auto;
+  margin-top:10px;
+  margin-bottom:10px;
 }
-.description-box h3{
+.description-box h2{
   font-size: 1.5rem;
   font-weight: normal;
   color: rgb(146,167,205);
@@ -80,18 +91,21 @@ h3 {
 a {
   text-decoration: none;
   color: white;
+  padding: 20px;
 }
 
 a .botton2{
-  width: 100%;
   display: block;
   font-size: 1vw;
   text-align: center;
   margin: 20px;
-  color: rgb(146,167,205);
-  border-style: solid;
+  color: rgb(100,128,179);
+  background-color: rgb(100,128,179);
+  border: 2px solid white;
   text-decoration: none;
+  padding: 20px;
 }
+
 p{
   font-size: 1.5vw;
   font-weight: lighter;
@@ -107,23 +121,15 @@ img {
   height: auto;
   padding-top: 10px;
 }
-.sticky{
-  width: 50%;
-  height: auto;
-  padding-top: 75px;
-  position: -webkit-sticky;
-  position: sticky;
-  float: left;
-  padding: 20px;
-  top: 0;
-}
+
 
 /*SEARCH BAR (CONTAINER ON BUTTON)*/
 .search-container {
   color: rgb(146,167,205);
   width: 100%;
-  display: block;
-  margin-bottom: 20px;
+  display: flex;
+  margin:auto;
+  padding:50px;
 }
 input#search-bar {
   color: rgb(146,167,205);
@@ -132,7 +138,7 @@ input#search-bar {
   height: 50px;
   padding: 0 20px;
   font-size: 1rem;
-  border: 1px solid rgb(146,167,205);
+  border: 4px solid rgb(146,167,205);
   outline: none;
 }
 input#search-bar:focus {
@@ -160,33 +166,37 @@ input#search-bar:focus:-ms-placeholder {
 }
 /*GO*/
 .button{
-  background-color: rgb(146,167,205);
+  background-color: rgb(100,128,179);
   color: white;
   height: 50px;
   width: 9%;
-  border: 2px solid rgb(146,167,205);
+  border: 2px solid rgb(100,128,179);
   font-weight: bold;
 }
 .button:hover{
   cursor: pointer;
 }
+
+
 /*SEE LIST OF ALL PROTEINS*/
 .center {
   width: 100%;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
 }
 .button2{
   margin-bottom: 20px;
-  background-color: rgb(146,167,205);
-  color: rgb(227,234,244);
+  background-color: rgb(100,128,179);
+  color: rgb(100,128,179)
   height: 60px;
   width: 30%;
-  border: 4px solid rgb(227,234,244);
+  border: 8px solid rgb(100,128,179);
   font-weight: bold;
+  padding:10px;
 }
 /*STRUCTURE*/
 .column{
@@ -201,7 +211,7 @@ input#search-bar:focus:-ms-placeholder {
 }
 /*FOOTNOTES*/
 .credits {
-  font-size: .9vw;
+  font-size: 1.2vw;
   font-weight: lighter;
   left: 0;
   bottom: 0;
@@ -284,11 +294,10 @@ input#search-bar:focus:-ms-placeholder {
   }
   img {
     display: none;
-/*    width: 100%;
+  width: 100%;
     height: auto;
     padding-top: 130px;
     margin:;
-*/
   }
   .center {
     width: 100%;
@@ -421,22 +430,93 @@ input#search-bar:focus:-ms-placeholder {
   }
 }
 
+
+
+
+
+/* Home Panels */
 .thumbnails {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
+    grid-gap: 10px;
+    width:90%;
+    margin:auto;
 
 }
 
 .thumb {
     padding: 10px;
+    background-color:rgb(224,230,244);
     border:2px solid rgb(146,167,205);
     position: relative;
     padding-bottom: 40px;
 
 }
+.thumb h1{
+  font-size: 3.2vw;
+  text-align: center;
+  padding: 50px;
+  margin: auto;
+  color: rgb(146,167,205);
+}
 
-.details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
+.slide {
+    background-color:rgb(224,230,244);
+    border:2px solid rgb(146,167,205);
+    width:92%;
+    margin: auto;
+    margin-top:0px;
+    margin-bottom:75px;
+    padding-top:40px;
+    padding-bottom:50px;
+}
+
+.thumb2 {
+    display: flex;
+    gap: 30px;
+    width:90%;
+    margin:auto;
+}
+
+/* Home banner */
+/* Full height image header */
+.w3-top {
+height: 400px;
+width:100%;
+z-index:1;
+background-image: url("/static/bg1.png");
+background-position: center;
+background-size: cover;
+
+
+}
+
+.w3-top a{
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: rgb(100,128,179);
+  color: white;
+  font-weight: bold;
+  padding:10px;
+}
+
+
+
+.banner {
+  display: flex;
+  margin: auto;
+  margin-bottom: auto;
+  background-color: rgb(224,230,244);
+  border:4px solid rgb(224,230,244);
+  width:50%;
+
+}
+.banner a{
+  font-size: 3.2vw;
+  text-align: center;
+  padding: 0px;
+  color: rgb(146,167,205);
+  text-decoration: none;
+}

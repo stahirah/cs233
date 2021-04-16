@@ -1,6 +1,7 @@
 {% extends 'index.html' %}
 
 {%block content%}
+<div class="slide">
     <h1 class="listheading">LIST OF POSSIBLE TARGETS</h1>
 
 <div class="thumbnails">
@@ -12,6 +13,7 @@
     {% endfor %}
     </div>
 
+</div>
 <div class="center">
     <button class="button2" id="listBtn"> <a href="{% url 'homepage' %}">BACK TO HOMEPAGE</a></button>
     </div>
