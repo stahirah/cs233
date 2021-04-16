@@ -493,8 +493,6 @@ background-size: cover;
 
 .w3-top a{
   display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-bottom: 20px;
   background-color: rgb(100,128,179);
   color: white;
