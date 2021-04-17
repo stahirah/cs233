@@ -23,8 +23,8 @@
 <div class="slide">
     <h1>LOCATIONS</h1>
                          {% for p in photos %}
-                                <div class = "description-box">
-                               <h2>{{p.images.name|slice:":-12"}}</h2><img src="{{p.images.url}}">
+                                <div>
+                               <h2 class = "thumb3">{{p.images.name|slice:":-12"}}</h2><img src="{{p.images.url}}">
                                     </div>
                         {% endfor %}
 

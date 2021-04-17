@@ -6,7 +6,7 @@ body, html {
 height:100%;
 background-position: top;
 background-repeat: repeat;
-  background-size: cover;
+background-size: cover;
 background-image: url("/static/bg2.png");
 background-blend-mode: lighten;
 font-family: sans-serif;
@@ -63,10 +63,10 @@ h3 {
   color: orange;
 }
 .description-box{
-  padding: 10px;
+  padding: 25px;
   border-style: solid;
   background-color: white;
-  border:2px solid rgb(146,167,205);
+  border:0px solid rgb(146,167,205);
   width:90%;
   margin:auto;
   margin-top:10px;
@@ -175,6 +175,8 @@ input#search-bar:focus:-ms-placeholder {
 }
 .button:hover{
   cursor: pointer;
+  background-color: orange;
+  border: 2px solid orange;
 }
 
 
@@ -193,11 +195,17 @@ input#search-bar:focus:-ms-placeholder {
   background-color: rgb(100,128,179);
   color: rgb(100,128,179)
   height: 60px;
-  width: 30%;
+  width: 25%;
   border: 8px solid rgb(100,128,179);
   font-weight: bold;
   padding:10px;
 }
+
+.button2:hover{
+  background-color: orange;
+  border: 8px solid orange;
+}
+
 /*STRUCTURE*/
 .column{
   float: left;
@@ -478,6 +486,19 @@ input#search-bar:focus:-ms-placeholder {
     margin:auto;
 }
 
+.thumb3 {
+    display: flex;
+    gap: 30px;
+    width:90%;
+    margin:auto;
+    padding-top:60px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: rgb(146,167,205);
+}
+
+
+
 /* Home banner */
 /* Full height image header */
 .w3-top {
@@ -499,6 +520,11 @@ background-size: cover;
   font-weight: bold;
   padding:10px;
 }
+
+.w3-top a:hover{
+  background-color: orange;
+}
+
 
 
 
