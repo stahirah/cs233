@@ -302,8 +302,9 @@ input#search-bar:focus:-ms-placeholder {
   }
   img {
     display: none;
-  width: 100%;
+  width: auto;
     height: auto;
+    max-width:100%
     padding-top: 130px;
     margin:;
   }

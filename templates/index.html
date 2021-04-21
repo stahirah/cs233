@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+<script src="{% static 'jquery.rwdImageMaps.min.js' %}"></script>
 
 <html lang="en" >
 <head>
@@ -80,6 +81,13 @@
                     <area target="_self" alt="Cell Membrane" title="Cell Membrane" href="link1" coords="822,3,758,357,729,660,729,763,732,1049,784,1483,819,1676,909,1683,855,1332,832,1046,822,817,829,615,851,409,880,232,925,0" shape="poly">
                 </map>
     </div>
+
+<script>
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+});
+</script>
+
   {% endblock %}
 
 
@@ -87,22 +95,8 @@
     Benjamin, Dominik, Paul, Sahra, Tabata <br> CSCI 233 Computer Science Minor Capstone <br> Fall 2021
   </div>
 
-  <script type="text/javascript">
-    var input = document.getElementById("search-bar");
-    input.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13) {
-       event.preventDefault();
-       document.getElementById("searchBtn").click();
-      }
-    });
-  </script>
 
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/imageMapResizer.min.js"></script>
-	<script type="text/javascript">
-		$('map').imageMapResize();
-	</script>
 
 </body>
 </html>
