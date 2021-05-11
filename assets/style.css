@@ -21,13 +21,27 @@ h1{
   margin: auto;
   color: rgb(146,167,205);
 }
+
 .listheading{
   font-size: 3.2vw;
   text-align: center;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: auto;
   color: rgb(146,167,205);
 }
+
+.link{
+  font-size: 3.2vw;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: auto;
+  color: rgb(146,167,205);
+}
+
+.link:hover{
+  color: orange;
+}
+
 h2{
   font-size: 1.7vw;
   font-weight: bolder;
@@ -121,7 +135,6 @@ img {
   height: auto;
   padding-top: 10px;
 }
-
 
 /*SEARCH BAR (CONTAINER ON BUTTON)*/
 .search-container {
@@ -471,7 +484,6 @@ input#search-bar:focus:-ms-placeholder {
 
 .slide {
     background-color:rgb(224,230,244);
-    border:2px solid rgb(146,167,205);
     width:92%;
     margin: auto;
     margin-top:0px;

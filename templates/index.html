@@ -36,11 +36,11 @@
 
 
                 <div class = "description-box">
-                    <h2>VIRAL PATHOGENESIS</h2>
-                    <p>Viral Pathogenesis involves a series of specific events necessary for the virus to gain access into the target host cell, hijack cellular machineries, reproduction and assembly of replicated viral parts, and finally the exit of new viral copies. This project utilizes all experimental data about Sars-Cov2 virus to present the pathogenesis of covid. </p>
+                    <h2>PATHOGENESIS OF VIRUSES</h2>
+                    <p>Viral pathogenesis is the process by which viruses target and infect host cells, disrupting host processes and resulting to a disease. The mechanism generally involves a series of specific events necessary for the virus to gain access into the target host cell, hijack cellular machineries, reproduction and assembly of replicated viral parts, and finally the exit of new viral copies, spreading into other host cells, tissues, and organs. This information website utilizes all confirmed experimental data about Sars-Cov-2 virus, known as COVID-19, to present the important players and components involved in the pathogenesis of covid. </p>
                     </div>
                 <div>
-                <a href="{% url 'homepage' %}"><h1 class = "listheading">COVID PROTEIN DIRECTORY</h1></a>
+                <a class = "protein-name" href="{% url 'proteins:list' %}"><h1 class="link"> VIRAL PROTEIN DIRECTORY</h1></a>
                     <div class = "center">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/PSnSo9kYlH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
@@ -51,12 +51,15 @@
         <div class = "slide">
             <div class ="thumb2">
                 <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PSnSo9kYlH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class = "protein-name" href="/proteins/search/?csrfmiddlewaretoken=2bXqmt2u67LNakNt3Td4yj2rfKU4jRkSgvpjIjU4dBfmURnLgZMM3S7RMOA7Y5sd&q=sars2"><h1 class="link"> Sars-Cov2 Proteins </h1></a>
+                    <iframe width="504" height="285" src='/static/cov_gif2.gif'></iframe>
                     </div>
                 <div class = "description-box">
-                    <h2>SARS-COV2</h2>
-                    <p>The novel coronavirus COVID-19, full name Severe acute respiratory syndrome coronavirus 2 (SARS-COV2), ... </p>
-                    </div>
+                    <h2>COVID-19</h2>
+                    <p>The novel coronavirus COVID-19, full name Severe acute respiratory syndrome coronavirus 2 (SARS-COV2), spread through small droplets produced by individuals by coughing or exhaling. Its pathogenesis is attributed to its Spike-Protein, located in the membrane encapsulating its viral genome. The Spike Protein recognizes and latches on specific receptors of the host cell membrane, initiating viral entry. Disassembly of the virus can occur in the cytoplasm or in the host endoplasmic reticulum. The viral genome is then replicated by hijacking host ribosomes. </p>
+
+
+                </div>
             </div>
             </div>
         </div>
@@ -64,11 +67,11 @@
 <div class="slide">
         <div class = "description-box">
             <h2>SUBCELLULAR LOCATIONS</h2>
-            <p>A mammalian cell is organized into neighborhoods and compartments known as organelles. These subcellular locations allow the temporal and spatial organization of complex processes necessary for cell function. The goal of viruses is to ... </p>
+            <p>A mammalian cell is organized into neighborhoods and membrane-bound compartments known as organelles. These subcellular locations allow the temporal and spatial organization of complex processes necessary for cellular function. The goal of viruses is to navigate its way into the host cell and taking advantage of different cellular components. </p>
 
 
         </div>
-    <img src="/static/default.png" usemap="#image-map">
+    <img src = '/static/locations.png'>
                 <map name="image-map">
                     <area target="_self" alt="Mitochondria" title="Mitochondria" href="/locations/mitochondria" coords="1038,402,1090,293,1232,220,1325,67,1454,80,1493,222,1400,377,1245,486,1170,496,1093,489" shape="poly">
                     <area target="_self" alt="Nucleus" title="Nucleus" href="/locations/nucleus" coords="2704,355,488" shape="circle">
@@ -90,13 +93,9 @@ $(document).ready(function(e) {
 
   {% endblock %}
 
-
   <div class="credits">
     Benjamin, Dominik, Paul, Sahra, Tabata <br> CSCI 233 Computer Science Minor Capstone <br> Spring 2021
   </div>
-
-
-
 
 </body>
 </html>
